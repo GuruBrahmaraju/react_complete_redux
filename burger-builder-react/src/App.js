@@ -1,26 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
-        <p>
-        Hello!! GuruBrahmaraju
-       </p>
-        <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-      </div>
+      // <div className="App">
+      // <h1>Hi, I'm a React App</h1>
+      // </div>
+      React.createElement('div',{className:"App"},
+      React.createElement('h1',null,'Hi, I\'m a React App'))
     );
   }
 }
