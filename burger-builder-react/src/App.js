@@ -14,12 +14,12 @@ class App extends Component {
     }
   }
  
-  switchHandler=()=>{
+  switchHandler=(newName)=>{
     // console.log("Was Clicked...");
     // this.state.person[0].name="guruBrahma";
     this.setState({
       person:[
-        {name:"Brahmaraju", age:"29"},
+        {name:newName, age:"29"},
         {name:"Krish", age:"20"},
         {name:"raviKumar", age:"55"}
       ]
@@ -34,10 +34,10 @@ class App extends Component {
      <Person name={this.state.person[0].name} age={this.state.person[0].age}/>
      <Person name={this.state.person[1].name}
               age={this.state.person[1].age}
-              click={this.switchHandler}
+              click={this.switchHandler.bind(this,"PersonCLICK")}
       >Business Developement Team</Person>
      <Person name={this.state.person[2].name} age={this.state.person[2].age}/>
-     <button onClick={this.switchHandler}>Switch</button>
+     <button onClick={this.switchHandler.bind(this,"ButtonClick")}>Switch</button>
    
       </div>
     
