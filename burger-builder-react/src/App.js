@@ -8,7 +8,7 @@ class App extends Component {
     this.state={
       person:[
         {name:"Guru", age:"29"},
-        {name:"RamuJii", age:"20"},
+        {name:"Murali", age:"20"},
         {name:"raviKumar", age:"15"}
       ]
     }
@@ -20,7 +20,7 @@ class App extends Component {
     this.setState({
       person:[
         {name:"Brahmaraju", age:"29"},
-        {name:"RamuJii", age:"20"},
+        {name:"Krish", age:"20"},
         {name:"raviKumar", age:"55"}
       ]
     })
@@ -32,7 +32,10 @@ class App extends Component {
       <h1>Hi, I'm a React App</h1>
       <p>This is Realy Working!!!</p>
      <Person name={this.state.person[0].name} age={this.state.person[0].age}/>
-     <Person name={this.state.person[1].name} age={this.state.person[1].age}/>
+     <Person name={this.state.person[1].name}
+              age={this.state.person[1].age}
+              click={this.switchHandler}
+      >Business Developement Team</Person>
      <Person name={this.state.person[2].name} age={this.state.person[2].age}/>
      <button onClick={this.switchHandler}>Switch</button>
    
